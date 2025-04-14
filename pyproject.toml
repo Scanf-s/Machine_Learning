@@ -1,0 +1,12 @@
+[project]
+name = "pythondev"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.9.4",
+    "notebook>=7.4.0",
+    "numpy>=2.0.2",
+    "pandas>=2.2.3",
+    "seaborn>=0.13.2",
+]
