@@ -134,6 +134,6 @@ class VocDataset(data.Dataset):
         return (
             np.array(names),
             np.array(labels).astype(np.float32),
-            np.array(box_indices),
+            np.array(box_indices, dtype=object),
             label_order,
         )
