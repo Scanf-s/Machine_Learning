@@ -68,7 +68,7 @@ class Bottleneck(nn.Module):
         return self.relu(out)
 
 
-class ResNet50(nn.Module):
+class MySimpleResNet50(nn.Module):
     def __init__(self, num_classes: int = 21):
         super().__init__()
         ############################# Stem ###################################
@@ -99,7 +99,7 @@ class ResNet50(nn.Module):
         Residual stage를 만들 때 사용하는 함수
         in_channels : 이전 레이어에서 계산된 채널의 개수 (입력 채널 개수)
         base_channels : Bottleneck블록의 위에 두개 Convolution 채널 개수
-        block_cnt : 논문에 나와있는 블록 반복 수 설정 (conv2_x : 3개, 3_x : 4개, 4_x : 6개, 5_x : 3개)
+        block_cnt : 블록 반복 수 설정 (conv2_x : 3개, 3_x : 4개, 4_x : 6개, 5_x : 3개)
         stride : 기본적으로 2로 설정
         """
         downsample = None
